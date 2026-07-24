@@ -1,0 +1,64 @@
+{
+  "name": "@oleksiimazurenko/fit-text",
+  "version": "0.1.0",
+  "description": "Fit text to its container with pure CSS — zero runtime JS. Container-query font sizing (cqi + clamp) with language-aware hyphenation. React component + drop-in stylesheet.",
+  "keywords": [
+    "react",
+    "css",
+    "container-queries",
+    "cqi",
+    "clamp",
+    "typography",
+    "fit-text",
+    "responsive",
+    "zero-js"
+  ],
+  "license": "MIT",
+  "author": "Oleksii Mazurenko",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleksiimazurenko/fit-text.git"
+  },
+  "homepage": "https://github.com/oleksiimazurenko/fit-text#readme",
+  "bugs": {
+    "url": "https://github.com/oleksiimazurenko/fit-text/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./style.css"
+  },
+  "sideEffects": [
+    "*.css",
+    "./dist/index.js",
+    "./dist/index.cjs"
+  ],
+  "files": [
+    "dist",
+    "style.css",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "size": "gzip -c dist/index.js | wc -c && gzip -c style.css | wc -c"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0"
+  }
+}
