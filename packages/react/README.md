@@ -24,21 +24,36 @@ a dependency — you import the component from this package and the CSS from it.
 
 ## Usage
 
+No configuration needed — the font scales to its container out of the box:
+
 ```tsx
 import { FitText } from '@oleksiimazurenko/react-fit-text'
 import '@oleksiimazurenko/fit-text/style.css'
 
 export function Hero() {
-  return (
-    <FitText min="2rem" max={72} slope={10}>
-      Learn anything, beautifully
-    </FitText>
-  )
+  return <FitText>Learn anything, beautifully</FitText>
 }
 ```
 
-The font is now fluid with the container: it grows with the container's width
-(`slope`% of it), never smaller than `min`, never larger than `max`.
+That's it. The font is fluid with the container, using sensible defaults
+(`2rem` → `4.5rem`, growing at `10cqi` — roughly 10% of the container's width).
+
+### Tuning (optional)
+
+All props are optional overrides — reach for them only when the defaults don't
+match your design:
+
+```tsx
+<FitText min="2rem" max={72} slope={10}>
+  Learn anything, beautifully
+</FitText>
+```
+
+`min` / `max` are your design's mobile floor and desktop ceiling; `slope` is how
+fast the font grows with the container (in `cqi`). None can be inferred
+automatically: `min`/`max` are design intent, and fitting to the exact text
+length would require measuring it in JavaScript — the very thing this library
+avoids. Pure CSS scales by the container's width, between the bounds you set.
 
 ### Props
 

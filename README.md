@@ -32,6 +32,10 @@ npm install @oleksiimazurenko/react-fit-text
 import { FitText } from '@oleksiimazurenko/react-fit-text'
 import '@oleksiimazurenko/fit-text/style.css'
 
+// No props needed — scales to its container with sensible defaults.
+<FitText>Learn anything, beautifully</FitText>
+
+// Optional tuning when the defaults don't fit your design:
 <FitText min="2rem" max={72} slope={10}>Learn anything, beautifully</FitText>
 ```
 
