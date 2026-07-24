@@ -10,7 +10,6 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "noEmit": true,
-    "verbatimModuleSyntax": true,
-    "ignoreDeprecations": "6.0"
+    "verbatimModuleSyntax": true
   }
 }
