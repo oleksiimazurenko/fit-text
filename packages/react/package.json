@@ -1,6 +1,6 @@
 {
   "name": "@oleksiimazurenko/react-fit-text",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Fit text to its container with pure CSS — zero runtime JS. React component over the fit-text stylesheet core: container-query font sizing with language-aware hyphenation.",
   "keywords": [
     "react",
