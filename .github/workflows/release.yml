@@ -2,14 +2,15 @@ name: Release
 
 on:
   push:
-    tags: ['v*']
+    branches: [main]
 
 permissions:
-  contents: read
-  id-token: write # required for npm provenance via OIDC trusted publishing
+  contents: write # changesets opens the "Version Packages" PR
+  pull-requests: write
+  id-token: write # npm provenance via OIDC trusted publishing
 
 jobs:
-  publish:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,5 +29,11 @@ jobs:
       - run: npm install -g npm@latest
 
       - run: pnpm install --frozen-lockfile
-      - run: pnpm build
-      - run: npm publish --provenance --access public
+
+      - uses: changesets/action@v1
+        with:
+          version: pnpm version-packages
+          publish: pnpm release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_PROVENANCE: 'true'

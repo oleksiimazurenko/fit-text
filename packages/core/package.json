@@ -1,0 +1,40 @@
+{
+  "name": "@oleksiimazurenko/fit-text",
+  "version": "0.2.0",
+  "description": "Fit text to its container with pure CSS — zero JS. The framework-agnostic stylesheet core: container-query font sizing (cqi + clamp) with language-aware hyphenation.",
+  "keywords": [
+    "css",
+    "container-queries",
+    "cqi",
+    "clamp",
+    "typography",
+    "fit-text",
+    "responsive",
+    "zero-js"
+  ],
+  "license": "MIT",
+  "author": "Oleksii Mazurenko",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleksiimazurenko/fit-text.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/oleksiimazurenko/fit-text#readme",
+  "bugs": {
+    "url": "https://github.com/oleksiimazurenko/fit-text/issues"
+  },
+  "exports": {
+    "./style.css": "./style.css"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "style.css",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
