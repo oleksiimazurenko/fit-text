@@ -1,5 +1,5 @@
 {
-  "name": "@oleksiimazurenko/fit-text",
+  "name": "@oleksiimazurenko/react-fit-text",
   "version": "0.1.0",
   "description": "Fit text to its container with pure CSS — zero runtime JS. Container-query font sizing (cqi + clamp) with language-aware hyphenation. React component + drop-in stylesheet.",
   "keywords": [

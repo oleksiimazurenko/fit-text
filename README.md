@@ -1,4 +1,4 @@
-# @oleksiimazurenko/fit-text
+# @oleksiimazurenko/react-fit-text
 
 Fit text to its container with **pure CSS** — zero runtime JavaScript.
 
@@ -16,14 +16,14 @@ during SSR before hydration.
 ## Install
 
 ```sh
-npm install @oleksiimazurenko/fit-text
+npm install @oleksiimazurenko/react-fit-text
 ```
 
 ## Usage
 
 ```tsx
-import { FitText } from '@oleksiimazurenko/fit-text'
-import '@oleksiimazurenko/fit-text/style.css'
+import { FitText } from '@oleksiimazurenko/react-fit-text'
+import '@oleksiimazurenko/react-fit-text/style.css'
 
 export function Hero() {
   return (
@@ -79,7 +79,7 @@ You don't need the component. Apply the classes yourself and set the custom
 properties:
 
 ```html
-<link rel="stylesheet" href="@oleksiimazurenko/fit-text/style.css" />
+<link rel="stylesheet" href="@oleksiimazurenko/react-fit-text/style.css" />
 
 <h2 class="fit-text" style="--fit-text-min: 2rem; --fit-text-max: 72px; --fit-text-slope: 10">
   <span class="fit-text__inner">Learn anything, beautifully</span>
